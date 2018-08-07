@@ -12,7 +12,7 @@ class mainApp(App):
 
     _layout = None #This holds the root layout widget
 
-    _labels = [None] #This will hold all our labels
+    _labels = [None]*15 #This will hold all our labels
 
 
     def build(self):
@@ -33,7 +33,7 @@ class mainApp(App):
         #If GPIO40 is triggered, add the widget
         if pi.read(40):
             self._labels[0] = Label(text="Hello!", font_size=150)
-            self._layout.add_widget(self._labels[0],0)
+            self._layout.add_widget(self._labels[0])
 
         #If GPIO41 is triggered, remove the widget
         if pi.read(41):
