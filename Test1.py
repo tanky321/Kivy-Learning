@@ -40,7 +40,7 @@ class mainApp(App):
             self._layout.remove_widget(self._labels[0])
 
 
+if __name__ == "__main__":
+    main_app = mainApp()
 
-main_app = mainApp()
-
-main_app.run()
+    main_app.run()
